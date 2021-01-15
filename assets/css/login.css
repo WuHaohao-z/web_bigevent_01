@@ -1,0 +1,51 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url('/assets/images/login_bg.jpg') no-repeat center top;
+    background-size: cover;
+} 
+/* 登录注册区域 */
+.loginAndRegBox{
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* 标题 */
+.title_box {
+    height: 60px;
+    background: url('/assets/images/login_title.png') no-repeat center;
+}
+.reg_box{
+    display: none;
+}
+/* 登陆表单的美化 */
+.layui-form{
+    padding: 0 30px;
+}
+.links{
+    /* 用C3的弹性布局 */
+    display: flex;
+    /* 子元素在主轴方向上从后向前排列 */
+    justify-content: flex-end;
+}
+.links a{
+    font-size: 12px;
+}
+/* 给图标定位 */
+.layui-form-item {
+    position: relative;
+}
+.layui-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.layui-input {
+    padding-left: 32px;
+}
