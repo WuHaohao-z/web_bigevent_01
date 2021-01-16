@@ -82,7 +82,7 @@ $(function () {
                 // 打印登录的结果
                 console.log(res);
                 // 将登陆成功得到token的字符串保存到localstorage中
-                localStorage.setItem("tocken",res.token)
+                localStorage.setItem("token",res.token)
                 // 登录成功后跳转到后台主页
                 location.href = "/index.html"
             }
