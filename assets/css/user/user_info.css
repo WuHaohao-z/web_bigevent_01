@@ -1,0 +1,10 @@
+/* 初始化操作 */
+/* html根本就没有内外边距  */
+body{
+    margin: 0;
+    background-color: #f2f3f5;
+    padding: 15px;
+}
+.layui-form {
+    width: 500px;
+}

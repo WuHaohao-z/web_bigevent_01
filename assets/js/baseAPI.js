@@ -26,7 +26,7 @@ $.ajaxPrefilter(function (options) {
 
     // 登录拦截（不登陆，不允许访问其他页面）
     options.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         var obj = res.responseJSON;
         if (obj.status === 1 && obj.message === "身份认证失败！") {
             // 销毁token

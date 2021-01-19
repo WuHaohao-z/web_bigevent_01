@@ -1,0 +1,9 @@
+/* 初始化操作 */
+body{
+    padding: 15px;
+    margin: 0;
+    background-color: #f2f3f5;
+}
+form{
+    width: 500px;
+}
