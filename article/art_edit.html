@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="/assets/css/article/art_edit.css">
 </head>
 <body>
-    <!-- 卡片区 -->
+  <!-- 卡片区 -->
   <div class="layui-card">
-    <div class="layui-card-header">文章发布</div>
+    <div class="layui-card-header">写文章</div>
     <div class="layui-card-body">
       <!-- 发布文章的表单 -->
-      <form lay-filter="form-edit" class="layui-form" id="form-edit">
-          <input type="hidden" name="Id">
+      <form class="layui-form" id="form-edit" lay-filter="form-edit">
+        <input type="hidden" name="Id">
         <!-- 文章标题 -->
         <div class="layui-form-item">
           <label class="layui-form-label">文章标题</label>
@@ -86,6 +86,8 @@
     <option value="{{$value.Id}}">{{$value.name}}</option>
     {{/each}}
   </script>
+
+
 
     <!-- 引入layui的js -->
     <script src="/assets/lib/layui/layui.all.js"></script>

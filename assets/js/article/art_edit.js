@@ -5,8 +5,8 @@ $(function () {
     var form = layui.form
     // 用等号切割，然后使用后面的值
     // alert(location.search.split("=")[1])
-    var id = location.search.split("=")[1];
     function initForm() {
+        var id = location.search.split("=")[1];
         $.ajax({
             method: "GET",
             url: "/my/article/" + id,
@@ -14,11 +14,11 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg(res.message)
                 }
-                form.val("form-edit", res.data);
+                form.val("form-edit",res.data);
                 // 赋值
                 tinyMCE.activeEditor.setContent(res.data.content);
                 if (!res.data.cover_img) {
-                    return layer.msg(res.message)
+                    return layer.msg("用户未曾上传照片！")
                 }
                 var newImgURL = baseURL + res.data.cover_img
                 // 为裁剪区域重新设置图片
@@ -142,7 +142,9 @@ $(function () {
                 // 跳转
                 // location.href = "/article/art_list.html"
                 // window.parent.$("#art_list").click()
-                window.parent.document.getElementById("art_list").click()
+                setTimeout(function () {
+                    window.parent.document.getElementById("art_list").click()
+                },1500)
             }
         });
     }
